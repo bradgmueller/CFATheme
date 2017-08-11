@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="e1Z-Ay-whd">
+                                <rect key="frame" x="116.5" y="84" width="143" height="29"/>
+                                <segments>
+                                    <segment title="Auto"/>
+                                    <segment title="Day"/>
+                                    <segment title="Night"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="NAH-S7-1w2"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brightness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALn-bl-rfU">
+                                <rect key="frame" x="146" y="156" width="82" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note: To experience theme changing from screen brightness, please run on a real device" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elz-iF-mdo">
+                                <rect key="frame" x="36" y="618" width="303" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Elz-iF-mdo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="CsS-RB-wKt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Elz-iF-mdo" secondAttribute="trailing" constant="20" id="Dn8-Ne-7Wa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Elz-iF-mdo" secondAttribute="bottom" constant="20" id="PEs-xJ-VbT"/>
+                            <constraint firstItem="e1Z-Ay-whd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="XTX-Xe-hA9"/>
+                            <constraint firstItem="ALn-bl-rfU" firstAttribute="top" secondItem="e1Z-Ay-whd" secondAttribute="bottom" constant="44" id="Z1p-rS-hNi"/>
+                            <constraint firstItem="ALn-bl-rfU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cSD-tm-UrB"/>
+                            <constraint firstItem="e1Z-Ay-whd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tS5-Ef-KuU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="ALn-bl-rfU" id="SeX-ZB-mdb"/>
+                        <outlet property="noteLabel" destination="Elz-iF-mdo" id="IQ2-WN-Bb5"/>
+                        <outlet property="segmentedControl" destination="e1Z-Ay-whd" id="kUu-d6-NV7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
